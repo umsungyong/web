@@ -1,5 +1,5 @@
 <%@page import="java.sql.ResultSet"%>
-<%@page import="comon.Connecter"%>
+<%@page import="comon.Connector"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -12,10 +12,10 @@
 </head>
 <body>
 	<%
-	Connection con = Connecter.getConnection();
-	Statement stmt = con.createStatement();
-	String sql = "SELECT * FROM car";
-	ResultSet rs = stmt.executeQuery(sql);
+		Connection con = Connector.getConnection();
+		Statement stmt = con.createStatement();
+		String sql = "SELECT * FROM car";
+		ResultSet rs = stmt.executeQuery(sql);
 	%>
 	<a href=""></a><button>회원정보입력</button>
 	<table border="1">
